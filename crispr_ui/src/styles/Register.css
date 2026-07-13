@@ -1,0 +1,252 @@
+.register-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #020024, #090979, #00d4ff);
+}
+
+.register-card {
+  width: 420px;
+  padding: 35px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.register-input{
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  box-sizing: border-box;
+  background: rgba(255,255,255,0.8); /* 🔥 FIX */
+  color: rgb(13, 13, 13);                       /* 🔥 ADD THIS */
+}
+.register-button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: #00d4ff;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-link {
+  margin-top: 15px;
+  cursor: pointer;
+  color: #00eaff;
+}
+
+.error-text {
+  color: #ff4d4d;
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* FLOATING INPUT */
+.input-group {
+  position: relative;
+}
+
+.input-group input {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-size: 14px;
+}
+
+.input-group label {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.input-group input:focus+label,
+.input-group input:not(:placeholder-shown)+label {
+  top: -8px;
+  font-size: 12px;
+  color: #00d4ff;
+}
+
+/* PASSWORD BOX */
+.password-wrapper {
+  position: relative;
+}
+.password-wrapper {
+  width: 100%;
+}
+
+.password-wrapper input {
+  width: 100%;
+}
+
+
+
+.eye-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+/* STRENGTH BAR */
+.strength-box {
+  margin-top: 10px;
+}
+
+.strength-bar {
+  height: 6px;
+  background: #333;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.strength-fill {
+  height: 100%;
+  transition: 0.3s;
+}
+
+.strength-fill.Weak {
+  width: 30%;
+  background: red;
+}
+
+.strength-fill.Medium {
+  width: 60%;
+  background: orange;
+}
+
+.strength-fill.Strong {
+  width: 100%;
+  background: #00ff99;
+}
+
+.strength-text {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.strength-text.Weak {
+  color: red;
+}
+
+.strength-text.Medium {
+  color: orange;
+}
+
+.strength-text.Strong {
+  color: #00ff99;
+}
+
+/* RULES */
+.password-rules {
+  list-style: none;
+  padding: 0;
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+.password-rules li.valid {
+  color: #00ff99;
+}
+
+/* MATCH TEXT */
+.match-text {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.match {
+  color: #00ff99;
+}
+
+.no-match {
+  color: red;
+}
+
+.register-input.invalid {
+  border: 2px solid red;
+  box-shadow: 0 0 8px red;
+}
+select{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* ================= ANIMATIONS ================= */
+
+/* Page Fade In */
+.fade-in{
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn{
+  from{
+    opacity:0;
+    transform: translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform: translateY(0);
+  }
+}
+
+/* Card Hover */
+.account-card{
+  transition: all 0.3s ease;
+}
+
+.account-card:hover{
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+/* Input Focus */
+.account-input{
+  transition: all 0.3s ease;
+}
+
+.account-input:focus{
+  box-shadow: 0 0 10px #00d4ff;
+  transform: scale(1.02);
+}
+
+/* Button Animation */
+.edit-btn,
+.save-btn,
+.cancel-btn{
+  transition: all 0.3s ease;
+}
+
+.edit-btn:hover,
+.save-btn:hover,
+.cancel-btn:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0,212,255,0.7);
+}
+
+/* Click effect */
+button:active{
+  transform: scale(0.96);
+}
+
+/* Title glow */
+.account-card h2{
+  text-shadow: 0 0 8px rgba(0,212,255,0.6);
+}

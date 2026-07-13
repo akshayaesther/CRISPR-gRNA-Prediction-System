@@ -1,0 +1,34 @@
+.score-container{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-top:20px;
+  position:relative;
+  gap: 10px;
+}
+
+.chart-container {
+  width: 150px;  /* Adjust size as needed */
+  height: 100px;
+}
+
+svg{
+  transform:rotate(-90deg);
+  width: 100%;
+  height: 100%;
+}
+
+circle{
+  fill:none;
+  stroke-width:20;
+}
+
+.bg{
+  stroke:#1e1e3f;
+}
+
+.progress{
+  stroke:#00eaff;
+  stroke-dasharray:440;
+  transition:stroke-dashoffset 1s ease;
+}

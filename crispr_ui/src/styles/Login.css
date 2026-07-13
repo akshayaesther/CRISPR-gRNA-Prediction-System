@@ -1,0 +1,145 @@
+.login-container{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#020024,#090979,#00d4ff);
+  font-family:Arial;
+}
+
+.login-card{
+  background:rgba(255,255,255,0.1);
+  backdrop-filter:blur(12px);
+  padding:40px;
+  border-radius:15px;
+  width:350px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.4);
+  text-align:center;
+  color:white;
+}
+
+.login-card h2{
+  margin-bottom:20px;
+}
+
+.login-input,select{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border:none;
+  border-radius:8px;
+  outline:none;
+  box-sizing: border-box;
+}
+
+.login-button{
+  width:100%;
+  padding:12px;
+  margin-top:15px;
+  background:#00d4ff;
+  border:none;
+  border-radius:8px;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.login-button:hover{
+  background:#0099cc;
+}
+
+.register-link{
+  margin-top:15px;
+  display:block;
+  color:#00d4ff;
+}
+
+/* ================= ANIMATIONS ================= */
+
+/* Page Fade In */
+.fade-in{
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn{
+  from{
+    opacity:0;
+    transform: translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform: translateY(0);
+  }
+}
+
+/* Card Hover */
+.account-card{
+  transition: all 0.3s ease;
+}
+
+.account-card:hover{
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+/* Input Focus */
+.account-input{
+  transition: all 0.3s ease;
+}
+
+.account-input:focus{
+  box-shadow: 0 0 10px #00d4ff;
+  transform: scale(1.02);
+}
+
+/* Button Animation */
+.edit-btn,
+.save-btn,
+.cancel-btn{
+  transition: all 0.3s ease;
+}
+
+.edit-btn:hover,
+.save-btn:hover,
+.cancel-btn:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0,212,255,0.7);
+}
+
+/* Click effect */
+button:active{
+  transform: scale(0.96);
+}
+
+/* Title glow */
+.account-card h2{
+  text-shadow: 0 0 8px rgba(0,212,255,0.6);
+}
+
+button {
+  position: relative;
+  overflow: hidden;
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  background: rgba(255,255,255,0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transition: width 0.4s, height 0.4s, opacity 0.4s;
+}
+
+button:active::after {
+  width: 200px;
+  height: 200px;
+  opacity: 1;
+  transition: 0s;
+}
+

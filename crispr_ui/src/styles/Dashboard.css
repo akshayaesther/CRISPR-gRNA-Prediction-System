@@ -1,0 +1,184 @@
+.dashboard-container{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  background: linear-gradient(135deg,#020024,#090979,#00d4ff);
+  color:white;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.dashboard-wrapper{
+  width:100%;
+  max-width:1000px;
+  text-align:center;
+}
+
+/* TITLE */
+.dashboard-title{
+  font-size:42px;
+  font-weight:bold;
+  margin-bottom:10px;
+}
+
+.dashboard-subtitle{
+  font-size:18px;
+  opacity:0.9;
+  margin-bottom:30px;
+}
+
+.greeting{
+  font-size:20px;
+  margin-bottom:10px;
+  opacity:0.9;
+}
+
+/* ROW 1 → 2 CARDS */
+.analytics-row{
+  display:grid;
+  grid-template-columns: repeat(2, 260px);
+  justify-content:center;
+  gap:30px;
+  margin-top:40px;
+}
+
+/* ROW 2 → 3 CARDS */
+.cards-row{
+  display:grid;
+  grid-template-columns: repeat(3, 260px);
+  justify-content:center;
+  gap:30px;
+  margin-top:40px;
+}
+
+/* COMMON CARD STYLE */
+.card, .analytics-card{
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(10px);
+  border-radius:16px;
+  padding:30px;
+  text-align:center;
+  box-shadow:0 8px 20px rgba(0,0,0,0.3);
+  transition:0.3s;
+  cursor:pointer;
+}
+
+/* HOVER */
+.card:hover, .analytics-card:hover{
+  transform:translateY(-10px);
+  background:rgba(255,255,255,0.15);
+}
+
+/* 👉 CARD STYLE (COMMON) */
+.card, .analytics-card{
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(10px);
+  border-radius:16px;
+  padding:30px;
+  text-align:center;
+  box-shadow:0 8px 20px rgba(0,0,0,0.3);
+  transition:0.3s;
+  cursor:pointer;
+}
+
+/* HOVER */
+.card:hover, .analytics-card:hover{
+  transform:translateY(-10px);
+  background:rgba(255,255,255,0.15);
+}
+
+/* TEXT */
+.card h2{
+  font-size:22px;
+  margin-bottom:10px;
+}
+
+.card p{
+  font-size:15px;
+}
+
+.analytics-card h3{
+  font-size:14px;
+  opacity:0.8;
+}
+
+.analytics-card p{
+  font-size:28px;
+  font-weight:bold;
+}
+
+/* SETTINGS LINK */
+.account-link{
+  margin-top:10px;
+  font-size:15px;
+  color:#00d4ff;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.account-link:hover{
+  text-decoration:underline;
+}
+
+/* ================= ANIMATIONS ================= */
+
+/* Page Fade In */
+.fade-in{
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn{
+  from{
+    opacity:0;
+    transform: translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform: translateY(0);
+  }
+}
+
+/* Card Hover */
+.account-card{
+  transition: all 0.3s ease;
+}
+
+.account-card:hover{
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+/* Input Focus */
+.account-input{
+  transition: all 0.3s ease;
+}
+
+.account-input:focus{
+  box-shadow: 0 0 10px #00d4ff;
+  transform: scale(1.02);
+}
+
+/* Button Animation */
+.edit-btn,
+.save-btn,
+.cancel-btn{
+  transition: all 0.3s ease;
+}
+
+.edit-btn:hover,
+.save-btn:hover,
+.cancel-btn:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0,212,255,0.7);
+}
+
+/* Click effect */
+button:active{
+  transform: scale(0.96);
+}
+
+/* Title glow */
+.account-card h2{
+  text-shadow: 0 0 8px rgba(0,212,255,0.6);
+}

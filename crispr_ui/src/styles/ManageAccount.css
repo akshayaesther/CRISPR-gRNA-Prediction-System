@@ -1,0 +1,172 @@
+/* BACKGROUND SAME AS OTHER PAGES */
+
+.account-container{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  padding-top: 130px;
+  background:linear-gradient(135deg,#020024,#090979,#00d4ff);
+  font-family:Arial;
+}
+
+
+/* GLASS CARD */
+
+.account-card{
+  width:450px;
+  height: auto;
+  padding:40px;
+
+  background:rgba(255,255,255,0.08);
+
+  backdrop-filter:blur(15px);
+
+  border-radius:15px;
+
+  color:white;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.4);
+
+  text-align:left;
+}
+
+
+/* TITLE */
+
+.account-card h2{
+  text-align:center;
+  margin-bottom:25px;
+}
+
+
+/* USER DETAILS */
+
+.account-card p{
+  margin:10px 0;
+  font-size:16px;
+}
+
+
+/* INPUT FIELDS */
+
+.account-input{
+  width:95%;
+  padding:12px;
+  margin:10px 0;
+
+  border:none;
+  border-radius:8px;
+
+  outline:none;
+}
+
+
+/* BUTTONS */
+
+.edit-btn,
+.save-btn,
+.cancel-btn{
+
+  width:100%;
+  padding:12px;
+  margin-top:15px;
+
+  border:none;
+  border-radius:8px;
+
+  font-weight:bold;
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+
+/* BUTTON COLORS */
+
+.edit-btn{
+  background:#00d4ff;
+  color:white;
+}
+
+.save-btn{
+  background:#28a745;
+  color:white;
+}
+
+.cancel-btn{
+  background:#dc3545;
+  color:white;
+}
+
+
+/* HOVER EFFECT */
+
+.edit-btn:hover,
+.save-btn:hover,
+.cancel-btn:hover{
+  transform:scale(1.03);
+  opacity:0.9;
+}
+
+/* ================= ANIMATIONS ================= */
+
+/* Page Fade In */
+.fade-in{
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn{
+  from{
+    opacity:0;
+    transform: translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform: translateY(0);
+  }
+}
+
+/* Card Hover */
+.account-card{
+  transition: all 0.3s ease;
+}
+
+.account-card:hover{
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+/* Input Focus */
+.account-input{
+  transition: all 0.3s ease;
+}
+
+.account-input:focus{
+  box-shadow: 0 0 10px #00d4ff;
+  transform: scale(1.02);
+}
+
+/* Button Animation */
+.edit-btn,
+.save-btn,
+.cancel-btn{
+  transition: all 0.3s ease;
+}
+
+.edit-btn:hover,
+.save-btn:hover,
+.cancel-btn:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0,212,255,0.7);
+}
+
+/* Click effect */
+button:active{
+  transform: scale(0.96);
+}
+
+/* Title glow */
+.account-card h2{
+  text-shadow: 0 0 8px rgba(0,212,255,0.6);
+}
