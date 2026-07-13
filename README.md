@@ -19,18 +19,21 @@ The system integrates a React-based user interface, backend APIs, and a deep lea
 - ML prediction score visualization
 
 ## System Architecture
+The system consists of three main components:
+
 CRISPR-gRNA-Prediction-System
 
+│
 ├── backend
 │ ├── Flask API
-│ ├── TensorFlow/Keras model
-│ └── DNA prediction service
+│ ├── TensorFlow/Keras Deep Learning Model
+│ └── DNA Sequence Prediction Service
 │
 ├── crispr_ui
-│ └── React frontend application
+│ └── React Frontend Application
 │
 └── db_server
-└── Node.js and Express backend
+└── Node.js and Express Backend
 ## Technologies Used
 
 ### Frontend
