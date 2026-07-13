@@ -75,26 +75,40 @@ Output:
 ## Installation and Setup
 
 ### Frontend Setup
+
+```bash
 cd crispr_ui
 npm install
 npm start
+```
+
 ### Node Backend Setup
+
+```bash
 cd db_server
 npm install
 node server.js
+```
+
 ### Machine Learning Backend Setup
+
+```bash
 cd backend
 pip install -r requirements.txt
 python app.py
+```
 ## Project Structure
+
+```bash
 backend - Machine learning model and prediction API
 crispr_ui - React user interface
 db_server - Node.js backend services
+```
 ## Academic Project
 
 This project was developed as a Final Year Project for the Bachelor of Technology in Information Technology program.
 
-## Team Members
+### Team Members
 
 - Akshaya Esther A
 - Hema B R
